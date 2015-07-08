@@ -64,7 +64,10 @@ $(function () {
     
     $('body').on('click', '#mostra', function () {
         removeMenu();
-        router.parseRule('<a data-page="single" data-id="2" ></a>', 0);
+        $('#home').toggleClass('activedr');
+        setTimeout(function(){
+            router.parseRule('<a data-page="single" data-id="2" ></a>', 0);
+        },300);
         return false;
     });
 

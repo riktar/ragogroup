@@ -20,7 +20,8 @@ header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
 *******************************/
 #container-all-section{position:relative;}
 .slide{height: 86vh;padding:36px 0 0 0;}
-#home{position:absolute;top:0;left:0;width:100%;}
+#home{transition: .2s all cubic-bezier(1,.1,.3,1);position:absolute;top:0;left:0;width:100%;}
+#home.activedr{top:-150%;}
 
 /*******************************
             SINGLE PAGE
