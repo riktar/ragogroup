@@ -20,7 +20,7 @@ header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
 *******************************/
 #container-all-section{position:relative;}
 .slide{height: 86vh;padding:36px 0 0 0;}
-#home{transition: .2s all cubic-bezier(1,.1,.3,1);position:absolute;top:0;left:0;width:100%;}
+#home{transition: all .2s cubic-bezier(1,.1,.3,1);position:absolute;top:0;left:0;width:100%;}
 #home.activedr{top:-150%;}
 
 /*******************************
@@ -69,7 +69,7 @@ header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
               FOOTER
 *******************************/
 footer{position:fixed;bottom:0; z-index: 100;width: 100%;padding:4px 0; background: #fff;}
-footer .icon{font-size: 1.4em; color:#fff;background: #d0c7c5; display: block; width: 100%; height:100%; text-align: center;transition: .1s all cubic-bezier(1,.1,.3,1)}
+footer .icon{font-size: 1.4em; color:#fff;background: #d0c7c5; display: block; width: 100%; height:100%; text-align: center;transition: all .1s cubic-bezier(1,.1,.3,1)}
 footer .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
 footer .row > div{padding:0 2px;}
 
