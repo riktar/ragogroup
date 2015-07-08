@@ -28,6 +28,7 @@ header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
 #dx-single{position: absolute;top:120px; right: 30px;z-index: 9;width: 30px;}
 #sx-single{position: absolute;top:120px; left: 30px;z-index: 9;width: 30px;}
 #gallery-single-page .slide-single{width:100%;height:40vh!important; background-size: cover!important; background-position: center center;}
+#gallery-single-page-pagina .slide-single{width:100%;height:350px; background-size: cover!important; background-position: center center;}
 #content-single{margin-bottom:3em;overflow-x: hidden;width:100%;}
 
 /*******************************
