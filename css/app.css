@@ -50,7 +50,7 @@ header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
 #content-lista .row{margin:0;padding:0;}
 .item-lista{width: 100%; position:relative; background: #fff;margin:4px 0;padding: 0;}
 .item-lista .col-xs-4{padding-left: 0;}
-.item-lista .evidence-list{height:76px;max-width:100%;}
+.item-lista .evidence-list{max-width:100%;}
 .item-lista h2{  margin: 10px 0 0 0;  font-size: 1.2em;}
 
 /*******************************
