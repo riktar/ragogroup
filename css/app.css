@@ -18,8 +18,9 @@ header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
 /*******************************
               MAIN
 *******************************/
-#main{}
+#container-all-section{position:relative;}
 .slide{height: 86vh;padding:36px 0 0 0;}
+#home{position:absolute;top:0;left:0;width:100%;}
 
 /*******************************
             SINGLE PAGE

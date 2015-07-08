@@ -61,6 +61,12 @@ $(function () {
         router.parseRule(this, 0);
         return false;
     });
+    
+    $('body').on('click', '#mostra', function () {
+        removeMenu();
+        router.parseRule('<a data-page="single" data-id="2" ></a>', 0);
+        return false;
+    });
 
 
     var element = document.getElementById('menu');
