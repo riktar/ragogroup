@@ -1,0 +1,72 @@
+body{background: #eae8e8;}
+/*******************************
+              HEADER
+*******************************/
+header{position:fixed;top:0; z-index: 100;width: 100%;padding:8px 0; background: #eae8e8;}
+header .icon{position:relative; padding: .3em .4em; background: #fff; border:2px solid #c3b9b5; border-radius: 5px; color:#c3b9b5; transition: .1s all cubic-bezier(1,.1,.3,1)}
+header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
+/*******************************
+              NAV
+*******************************/
+#menu{position:fixed;width:100%; height:100%; background: #eae8e8; left:-100%;top:0;z-index: 99; transition: all .3s cubic-bezier(1,.1,.3,1)}
+#menu.toggle{left:0;}
+#central-menu{padding-top:20px; padding-bottom:20px; margin-top:2em; background: #d0c7c5;}
+#central-menu .row{margin-bottom:2px;padding:0 1em;}
+#central-menu .row:last-child{margin-bottom:0px;}
+#central-menu .row>div{padding:2px;}
+
+/*******************************
+              MAIN
+*******************************/
+#main{}
+.slide{height: 86vh;padding:36px 0 0 0;}
+
+/*******************************
+            SINGLE PAGE
+*******************************/
+#container-gallery-single-page{width:100%; position: relative;}
+#dx-single{position: absolute;top:120px; right: 30px;z-index: 9;width: 30px;}
+#sx-single{position: absolute;top:120px; left: 30px;z-index: 9;width: 30px;}
+#gallery-single-page .slide-single{width:100%;height:350px; background-size: cover!important; background-position: center center;}
+#content-single{margin-bottom:3em;overflow-x: hidden;width:100%;}
+
+/*******************************
+           PRODOTTI PAGE
+*******************************/
+#container-gallery-prodotti{margin-bottom: 10px;width:100%; position: relative; height: 40vh;overflow: hidden;background-color: #fff;}
+#content-prodotti{margin-bottom:3em;}
+#content-prodotti .row{margin:0;padding:0;}
+#gallery-prodotti .slide-single{width:100%;height:40vh!important; background-size: cover!important; background-position: center center;}
+.item-prodotto{width: 100%; position:relative; background: #fff;margin:4px 0;padding: 0;}
+.item-prodotto .col-xs-3:first-child{padding-left: 0;}
+.item-prodotto .evidence-prodotto{height:66px;}
+.item-prodotto h2{  margin: 24px 0 0 5px;  font-size: 1.4em;}
+.item-prodotto .open-gallery{  font-size: 20px;  padding: 10px;  border: 3px solid #c3b9b5;  color: #669ad2;  border-radius: 10px;  margin: 9px 0 0 15px;}
+
+/*******************************
+           LIST PAGE
+*******************************/
+#content-lista{margin-bottom:3em;}
+#content-lista .row{margin:0;padding:0;}
+.item-lista{width: 100%; position:relative; background: #fff;margin:4px 0;padding: 0;}
+.item-lista .col-xs-4{padding-left: 0;}
+.item-lista .evidence-list{height:76px;max-width:100%;}
+.item-lista h2{  margin: 10px 0 0 0;  font-size: 1.2em;}
+
+/*******************************
+              HOME
+*******************************/
+#home .container-fluid{padding:0; margin:0;}
+#logo-container{height:40vh;background: #003365; text-align: center;}
+#more-home{height:40vh;background: #eae8e8; text-align: center;}
+#logo-container img, #more-home img{height:100%;}
+#mostra{max-width:80%!important; height:auto!important;margin-top:-20px!important;}
+
+/*******************************
+              FOOTER
+*******************************/
+footer{position:fixed;bottom:0; z-index: 100;width: 100%;padding:4px 0; background: #fff;}
+footer .icon{font-size: 1.4em; color:#fff;background: #d0c7c5; display: block; width: 100%; height:100%; text-align: center;transition: .1s all cubic-bezier(1,.1,.3,1)}
+footer .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
+footer .row > div{padding:0 2px;}
+
