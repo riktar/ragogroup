@@ -68,6 +68,11 @@ header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
 #mostra{max-width:80%!important; height:auto!important;margin-top:-20px!important;}
 
 /*******************************
+              CONTATTI
+*******************************/
+.margin-contatti{margin-top:2em}
+
+/*******************************
               FOOTER
 *******************************/
 footer{position:fixed;bottom:0; z-index: 100;width: 100%;padding:4px 0; background: #fff;}
