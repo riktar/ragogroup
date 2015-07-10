@@ -70,6 +70,12 @@ $(function () {
         },400);
         return false;
     });
+    
+    $('body').on('click', '#ricerca', function () {
+        removeMenu();
+        $('#searchbar-cont').toggleClass('activedr');
+        return false;
+    });
 
 
     var element = document.getElementById('menu');
@@ -85,6 +91,13 @@ $(function () {
     $('body').on('submit', '#contatti-rago', function () {
         alert('Email inviata correttamente! Sarai ricontattato a breve da un nostro operatore.')
         $('#contatti-rago')[0].reset();
+        return false;
+    });
+    
+    $('body').on('submit', '#ricerca-rago', function () {
+        $('#searchbar-cont').removeClass('activedr');
+        router.parseRule('<a data-page="list-ricerca" data-term="'+$('#searchbar').val()+'" ></a>', 0);
+        $('#ricerca-rago')[0].reset();
         return false;
     });
 

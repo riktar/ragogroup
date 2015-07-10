@@ -17,6 +17,13 @@ var router = {
                     $("#container-all-section").load("./contatti.html");
                     $('#title-page').html('contatti');
                     break;
+                    
+                case 'list-ricerca' :
+                    historyApp.push(rule);
+                    history.replaceState(null, null, 'list-ricerca.html?term=' + $(rule).data('term'));
+                    $("#container-all-section").load("./list-ricerca.html?term=" + $(rule).data('term'));
+                    $('#title-page').html('ricerca');
+                    break;
                 
                 case 'prodotti' :
                     historyApp.push(rule);
@@ -81,8 +88,8 @@ var router = {
                     historyApp.pop();
                     var prevRule = historyApp[historyApp.length - 1];
                 }
-                history.replaceState(null, null, $(prevRule).data('page') + '.html?id=' + $(prevRule).data('id')+'&cat='+ $(prevRule).data('cat'));
-                $("#container-all-section").load("./" + $(prevRule).data('page') + '.html?id=' + $(prevRule).data('id')+'&cat='+ $(prevRule).data('cat'));
+                history.replaceState(null, null, $(prevRule).data('page') + '.html?term=' + $(prevRule).data('term')+'&id=' + $(prevRule).data('id')+'&cat='+ $(prevRule).data('cat'));
+                $("#container-all-section").load("./" + $(prevRule).data('page') + '.html?term=' + $(prevRule).data('term')+'&id=' + $(prevRule).data('id')+'&cat='+ $(prevRule).data('cat'));
                 $('#title-page').html('');
             }
         }
