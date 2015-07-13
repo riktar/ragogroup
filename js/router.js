@@ -44,6 +44,12 @@ var router = {
                     $("#container-all-section").load('list-facebook.html?cat=' + $(rule).data('cat'));
                     $('#title-page').html('news');
                     break;
+                case 'list-video' :
+                    historyApp.push(rule);
+                    history.replaceState(null, null, 'list-video.html?cat=' + $(rule).data('cat'));
+                    $("#container-all-section").load('list-video.html?cat=' + $(rule).data('cat'));
+                    $('#title-page').html('video');
+                    break;
 
                 case 'single' :
                     historyApp.push(rule);
