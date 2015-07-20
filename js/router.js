@@ -38,6 +38,12 @@ var router = {
                     $("#container-all-section").load('list.html?cat=' + $(rule).data('cat'));
                     $('#title-page').html($(rule).data('cat'));
                     break;
+                case 'list-contenuto' :
+                    historyApp.push(rule);
+                    history.replaceState(null, null, 'list-contenuto.html?cat=' + $(rule).data('cat'));
+                    $("#container-all-section").load('list-contenuto.html?cat=' + $(rule).data('cat'));
+                    //$('#title-page').html($(rule).data('cat'));
+                    break;
                 case 'list-facebook' :
                     historyApp.push(rule);
                     history.replaceState(null, null, 'list-facebook.html?cat=' + $(rule).data('cat'));
@@ -56,6 +62,12 @@ var router = {
                     history.replaceState(null, null, 'single.html?id=' + $(rule).data('id'));
                     $("#container-all-section").load("./single.html?id=" + $(rule).data('id'));
                     $('#title-page').html('azienda');
+                    break;
+                case 'single-contenuto' :
+                    historyApp.push(rule);
+                    history.replaceState(null, null, 'single-contenuto.html?cat=' + $(rule).data('cat')+'&id=' + $(rule).data('id'));
+                    $("#container-all-section").load("./single-contenuto.html?cat="+ $(rule).data('cat')+'&id=' + $(rule).data('id'));
+                    //$('#title-page').html('azienda');
                     break;
                     
                 case 'single-cat' :

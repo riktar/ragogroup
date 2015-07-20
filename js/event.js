@@ -61,16 +61,16 @@ $(function () {
         router.parseRule(this, 0);
         return false;
     });
-    
+
     $('body').on('click', '#mostra', function () {
         removeMenu();
         $('#home').addClass('activedr');
-        setTimeout(function(){
+        setTimeout(function () {
             router.parseRule('<a data-page="single" data-id="2" ></a>', 0);
-        },400);
+        }, 400);
         return false;
     });
-    
+
     $('body').on('click', '#ricerca', function () {
         removeMenu();
         $('#searchbar-cont').toggleClass('activedr');
@@ -82,23 +82,49 @@ $(function () {
     Hammer(element).on("swipeleft", function () {
         removeMenu();
     });
-    
+
     var element = document.getElementById('container-all-section');
     Hammer(element).on("swiperight", function () {
         toggleMenu();
     });
-    
+
     $('body').on('submit', '#contatti-rago', function () {
         alert('Email inviata correttamente! Sarai ricontattato a breve da un nostro operatore.')
         $('#contatti-rago')[0].reset();
         return false;
     });
-    
+
     $('body').on('submit', '#ricerca-rago', function () {
         $('#searchbar-cont').removeClass('activedr');
-        router.parseRule('<a data-page="list-ricerca" data-term="'+$('#searchbar').val()+'" ></a>', 0);
+        router.parseRule('<a data-page="list-ricerca" data-term="' + $('#searchbar').val() + '" ></a>', 0);
         $('#ricerca-rago')[0].reset();
         return false;
+    });
+
+    $.ajax({
+        method: "GET",
+        url: POSTURL + "get-menu/",
+        dataType: "json",
+        cache: false,
+        success: function (data) {
+            var htmlList = '';
+            var contariga = 0;
+            for (index in data.list) {
+                var pagina = '';
+                if (contariga === 0) {
+                    htmlList += '<div class="row">';
+                }
+                contariga++;
+                var item = data.list[index];
+                var imagePath = MyHost + 'menu/' + item.Id + '/' + item.Media;
+                if(item.idContenuto === ""){ pagina = 'list-contenuto' } else { pagina = 'single-contenuto' }
+                htmlList += '\
+                <div class="col-xs-6">\n\
+                    <a href="#" data-page="'+pagina+'" data-cat="'+item.idMenu+'" data-id="'+item.idContenuto+'" ><img src="'+imagePath+'"></a>\n\
+                </div>';
+            }
+            $('#central-menu').append(htmlList);
+        }
     });
 
 });
