@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<widget xmlns	= "http://www.w3.org/ns/widgets"
+	version 	= "1.0">
+	<name>Rago Group</name>
+        
+	<description>
+        Da oltre un secolo lavoriamo, nella rigogliosa Piana del Sele, seguendo i principi dell'agricoltura sostenibile. Le nostre prime coltivazioni risalgono al 1892 e da allora, miscelando tradizione e innovazione, abbiamo rispettato sempre gli stessi principi: qualità ed ecosostenibilità.
+	</description>
+        
+  <icon src="img/icona.jpg" width="36" height="36" />
+</widget>
