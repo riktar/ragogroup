@@ -1,11 +1,26 @@
 <section class="slide" id="home">
-    <div class="container-fluid text-center">
-        <div id="logo-container">
-            <img src="img/logo.jpg">
-        </div>
-        <div id="more-home">
-            <img src="img/from.jpg">
-            <img id="mostra" src="img/mostra.jpg">
-        </div>
-    </div>
+<div class="container-fluid text-center">
+<div id="logo-container">
+<img id="home-top-img" src="img/home-top.png">
+</div>
+
+<div id="more-home">
+<img class="fogl leftf out" style="left: 20px;width: 50px;" src="img/foglie/foglia1.png">
+<img class="fogl rightf out" style="right: 0px;width: 100px;top: 45px;" src="img/foglie/foglia2.png">
+<img class="fogl bottomf out" style="bottom: 52px;width: 70px;left: 30px;" src="img/foglie/foglia3.png">
+<img class="fogl leftf out" style="left: 0;width: 50px;top: 40px;" src="img/foglie/foglia4.png">
+<img class="fogl leftf out" style="top: -30px;width: 30px;left: 50px;" src="img/foglie/foglia5.png">
+<img class="fogl bottomf out" style="bottom: 40px;right: 23px;width: 67px;" src="img/foglie/foglia6.png">
+<img class="fogl rightf out" style="right: 3px;width: 60px;top: -12px;" src="img/foglie/foglia7.png">
+<img id="from" src="img/from.png">
+<img id="mostra" src="img/mostra.jpg">
+</div>
+</div>
 </section>
+<script>
+    $(function(){
+        setTimeout(function (){
+            $('.fogl.out').removeClass('out');
+        },700)
+    });
+</script>

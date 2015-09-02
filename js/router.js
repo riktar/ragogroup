@@ -10,28 +10,28 @@ var router = {
                     $("#container-all-section").load("./home.html");
                     $('#title-page').html('');
                     break;
-                    
+
                 case 'contatti' :
                     historyApp.push(rule);
                     history.replaceState(null, null, 'contatti.html');
                     $("#container-all-section").load("./contatti.html");
                     $('#title-page').html('contatti');
                     break;
-                    
+
                 case 'list-ricerca' :
                     historyApp.push(rule);
                     history.replaceState(null, null, 'list-ricerca.html?term=' + $(rule).data('term'));
                     $("#container-all-section").load("./list-ricerca.html?term=" + $(rule).data('term'));
                     $('#title-page').html('ricerca');
                     break;
-                
+
                 case 'prodotti' :
                     historyApp.push(rule);
                     history.replaceState(null, null, 'prodotti.html');
                     $("#container-all-section").load("./prodotti.html");
                     $('#title-page').html('prodotti');
                     break;
-                
+
                 case 'list' :
                     historyApp.push(rule);
                     history.replaceState(null, null, 'list.html?cat=' + $(rule).data('cat'));
@@ -65,25 +65,25 @@ var router = {
                     break;
                 case 'single-contenuto' :
                     historyApp.push(rule);
-                    history.replaceState(null, null, 'single-contenuto.html?cat=' + $(rule).data('cat')+'&id=' + $(rule).data('id'));
-                    $("#container-all-section").load("./single-contenuto.html?cat="+ $(rule).data('cat')+'&id=' + $(rule).data('id'));
+                    history.replaceState(null, null, 'single-contenuto.html?cat=' + $(rule).data('cat') + '&id=' + $(rule).data('id'));
+                    $("#container-all-section").load("./single-contenuto.html?cat=" + $(rule).data('cat') + '&id=' + $(rule).data('id'));
                     //$('#title-page').html('azienda');
                     break;
-                    
+
                 case 'single-cat' :
                     historyApp.push(rule);
-                    history.replaceState(null, null, 'single-cat.html?id=' + $(rule).data('id') + '&cat='+ $(rule).data('cat'));
-                    $("#container-all-section").load("./single-cat.html?id=" + $(rule).data('id') + '&cat='+ $(rule).data('cat'));
-                     $('#title-page').html($(rule).data('cat'));
+                    history.replaceState(null, null, 'single-cat.html?id=' + $(rule).data('id') + '&cat=' + $(rule).data('cat'));
+                    $("#container-all-section").load("./single-cat.html?id=" + $(rule).data('id') + '&cat=' + $(rule).data('cat'));
+                    $('#title-page').html($(rule).data('cat'));
                     break;
-                
+
                 case 'single-cat-facebook' :
                     historyApp.push(rule);
-                    history.replaceState(null, null, 'single-cat-facebook.html?id=' + $(rule).data('id') + '&cat='+ $(rule).data('cat'));
-                    $("#container-all-section").load("./single-cat-facebook.html?id=" + $(rule).data('id') + '&cat='+ $(rule).data('cat'));
-                     $('#title-page').html('news');
-                    break;  
-                
+                    history.replaceState(null, null, 'single-cat-facebook.html?id=' + $(rule).data('id') + '&cat=' + $(rule).data('cat'));
+                    $("#container-all-section").load("./single-cat-facebook.html?id=" + $(rule).data('id') + '&cat=' + $(rule).data('cat'));
+                    $('#title-page').html('news');
+                    break;
+
                 case 'dovesiamo' :
                     historyApp.push(rule);
                     history.replaceState(null, null, 'dovesiamo.html?id=' + $(rule).data('id'));
@@ -106,8 +106,8 @@ var router = {
                     historyApp.pop();
                     var prevRule = historyApp[historyApp.length - 1];
                 }
-                history.replaceState(null, null, $(prevRule).data('page') + '.html?term=' + $(prevRule).data('term')+'&id=' + $(prevRule).data('id')+'&cat='+ $(prevRule).data('cat'));
-                $("#container-all-section").load("./" + $(prevRule).data('page') + '.html?term=' + $(prevRule).data('term')+'&id=' + $(prevRule).data('id')+'&cat='+ $(prevRule).data('cat'));
+                history.replaceState(null, null, $(prevRule).data('page') + '.html?term=' + $(prevRule).data('term') + '&id=' + $(prevRule).data('id') + '&cat=' + $(prevRule).data('cat'));
+                $("#container-all-section").load("./" + $(prevRule).data('page') + '.html?term=' + $(prevRule).data('term') + '&id=' + $(prevRule).data('id') + '&cat=' + $(prevRule).data('cat'));
                 $('#title-page').html('');
             }
         }

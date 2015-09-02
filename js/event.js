@@ -64,10 +64,14 @@ $(function () {
 
     $('body').on('click', '#mostra', function () {
         removeMenu();
-        $('#home').addClass('activedr');
+        $('#more-home > .fogl').addClass('out');
         setTimeout(function () {
-            router.parseRule('<a data-page="single" data-id="2" ></a>', 0);
-        }, 400);
+            $('#home').addClass('activedr');
+            setTimeout(function () {
+                router.parseRule('<a data-page="single" data-id="2" ></a>', 0);
+            }, 400);
+        }, 700);
+
         return false;
     });
 
@@ -117,10 +121,14 @@ $(function () {
                 contariga++;
                 var item = data.list[index];
                 var imagePath = MyHost + 'menu/' + item.Id + '/' + item.Media;
-                if(item.idContenuto === ""){ pagina = 'list-contenuto' } else { pagina = 'single-contenuto' }
+                if (item.idContenuto === "") {
+                    pagina = 'list-contenuto'
+                } else {
+                    pagina = 'single-contenuto'
+                }
                 htmlList += '\
                 <div class="col-xs-6">\n\
-                    <a href="#" data-page="'+pagina+'" data-cat="'+item.idMenu+'" data-id="'+item.idContenuto+'" ><img src="'+imagePath+'"></a>\n\
+                    <a href="#" data-page="' + pagina + '" data-cat="' + item.idMenu + '" data-id="' + item.idContenuto + '" ><img src="' + imagePath + '"></a>\n\
                 </div>';
             }
             $('#central-menu').append(htmlList);
