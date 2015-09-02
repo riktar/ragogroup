@@ -86,6 +86,11 @@ $(function () {
     Hammer(element).on("swipeleft", function () {
         removeMenu();
     });
+    
+    var element = document.getElementById('home');
+    Hammer(element).on("swipeup", function () {
+        $('#mostra').trigger('click');
+    });
 
     var element = document.getElementById('container-all-section');
     Hammer(element).on("swiperight", function () {
