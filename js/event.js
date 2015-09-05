@@ -31,11 +31,13 @@ function parseGetVars()
 
 function toggleMenu() {
     $('#menu').toggleClass('toggle');
+    $('#logo-rago-circle').toggleClass('visibiles');
 }
 
 function removeMenu() {
     if ($('#menu').hasClass('toggle')) {
         $('#menu').removeClass('toggle');
+        $('#logo-rago-circle').removeClass('visibiles');
     }
 }
 
@@ -91,7 +93,7 @@ $(function () {
     Hammer(element).on("swiperight", function () {
         toggleMenu();
     });
-
+    
     $('body').on('submit', '#contatti-rago', function () {
         alert('Email inviata correttamente! Sarai ricontattato a breve da un nostro operatore.')
         $('#contatti-rago')[0].reset();
