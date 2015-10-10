@@ -88,12 +88,20 @@ $(function () {
     Hammer(element).on("swipeleft", function () {
         removeMenu();
     });
-
+    
     var element = document.getElementById('container-all-section');
+    var hammertime = new Hammer(element);
+    hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    
+    Hammer(element).on("swipeup", function () {
+        console.log("swipe");
+        $('#mostra').trigger('click');
+    });
+
     Hammer(element).on("swiperight", function () {
         toggleMenu();
     });
-    
+
     $('body').on('submit', '#contatti-rago', function () {
         alert('Email inviata correttamente! Sarai ricontattato a breve da un nostro operatore.')
         $('#contatti-rago')[0].reset();
