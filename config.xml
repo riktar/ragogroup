@@ -21,6 +21,7 @@ and open the template in the editor.
     <feature name="http://api.phonegap.com/1.0/network" />
     
     <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     
     <access origin="*" />
     
