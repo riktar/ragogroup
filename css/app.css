@@ -6,9 +6,9 @@ body{background: #eae8e8;}
 /*******************************
               HEADER
 *******************************/
-#searchbar-cont{padding:4px 0;z-index: 98;position: fixed; top:-100px; width:100%;  transition: all .3s cubic-bezier(1,.1,.3,1); background: #eae8e8;}
+#searchbar-cont{padding:4px 0;z-index: 98;position: fixed; top:-100px; width:100%;  transition: all .3s cubic-bezier(1,.1,.3,1); background: #ccc;}
 #searchbar-cont.activedr{top:36px;}
-header{position:fixed;top:0; z-index: 100;width: 100%; padding:8px 0; background: rgba(0,0,0,.3);}
+header{position:fixed;top:0; z-index: 100;width: 100%; padding:8px 0; /*background: #eae8e8;*/background: #ccc;}
 header .icon{position:relative; padding: .3em .4em; background: #fff; border:2px solid #c3b9b5; border-radius: 5px; color:#c3b9b5; transition: .1s all cubic-bezier(1,.1,.3,1)}
 header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
 /*******************************
@@ -38,12 +38,14 @@ header .icon:active{background: #055E9E; color:#fff; border-color:#fff;}
 #sx-single{position: absolute;top:120px; left: 30px;z-index: 9;width: 30px;}
 #gallery-single-page .slide-single{width:100%!important;height:60vh!important; background-size: auto 100%!important; background-position: center center!important;}
 #gallery-single-page-pagina .slide-single{width:100%;height:400px; background-size: cover!important; background-position: center center;}
-@media screen and (min-width: 500px) {
-#gallery-single-page-pagina .slide-single{width:100%;height:700px; background-size: cover!important; background-position: center center;}
-}
+
 #content-single{margin-bottom:3em;overflow-x: hidden;width:100%;}
 #onda{position:absolute;top:52vh!important;width:100%;}
 #onda-pagina{position:absolute;top:350px!important;width:100%;}
+@media screen and (min-width: 500px) {
+#gallery-single-page-pagina .slide-single{width:100%;height:700px; background-size: cover!important; background-position: center center;}
+#onda-pagina{position:absolute;top:620px!important;width:100%;}
+}
 
 /*******************************
            PRODOTTI PAGE
